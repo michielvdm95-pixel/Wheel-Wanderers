@@ -1,23 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Valencia Bike Hub | Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valencia Bike Hub | Explore & Ride</title>
+    <style>
+        /* 1. THE FOUNDATION */
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; padding: 0; color: #333; background-color: #f9f9f9; }
+        
+        /* 2. THE NAVIGATION */
+        nav { background: #1a252f; padding: 1rem; position: sticky; top: 0; z-index: 1000; text-align: center; }
+        nav a { color: #fff; margin: 0 15px; text-decoration: none; font-size: 0.9rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+        nav a:hover { color: #e67e22; }
+
+        /* 3. HERO SECTION */
+        .hero { 
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://picsum.photos/id/146/1200/600'); 
+            background-size: cover; 
+            background-position: center;
+            height: 60vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            color: white; 
+            text-align: center; 
+        }
+        .hero h1 { font-size: 3rem; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .hero p { font-size: 1.2rem; max-width: 600px; margin: 20px 0; }
+        .btn-main { background: #e67e22; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+
+        /* 4. THE SPLIT SECTION (Services) */
+        .container { max-width: 1100px; margin: 50px auto; padding: 0 20px; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px; }
+        .card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-top: 5px solid #e67e22; }
+        .card h2 { margin-top: 0; color: #1a252f; }
+
+        /* 5. FOOTER */
+        footer { background: #1a252f; color: white; text-align: center; padding: 40px 0; margin-top: 50px; }
+    </style>
 </head>
 <body>
-    <header><h1>Valencia Bike Hub</h1></header>
 
-    <nav style="background-color: #333; padding: 15px; text-align: center;">
-        <a href="index.html" style="color: white; margin: 10px; text-decoration: none;">Home</a>
-        <a href="selling.html" style="color: white; margin: 10px; text-decoration: none;">Bikes for Sale</a>
-        <a href="services.html" style="color: white; margin: 10px; text-decoration: none;">Rentals & Tours</a>
-        <a href="explore.html" style="color: white; margin: 10px; text-decoration: none;">Valencia Routes</a>
-        <a href="about.html" style="color: white; margin: 10px; text-decoration: none;">About Me</a>
-        <a href="contact.html" style="color: white; margin: 10px; text-decoration: none;">Booking & Contact</a>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="selling.html">Bikes for Sale</a>
+        <a href="services.html">Rentals & Tours</a>
+        <a href="explore.html">Valencia Routes</a>
+        <a href="about.html">About Me</a>
+        <a href="contact.html">Booking</a>
     </nav>
 
-    <main style="padding: 20px; text-align: center;">
-        <h2>Welcome to Valencia's Best Bike Spot</h2>
-        <p>Whether you want to buy, rent, or head into the mountains by car, we have you covered.</p>
-    </main>
+    <header class="hero">
+        <h1>VALENCIA BIKE HUB</h1>
+        <p>Premium Road & MTB rentals. Guided "Car + Bike" experiences through the hidden trails of the Valencian community.</p>
+        <a href="services.html" class="btn-main">View Services</a>
+    </header>
+
+    <div class="container">
+        <div class="grid">
+            <div class="card">
+                <h2>🚲 The Shop</h2>
+                <p>We curate a selection of high-quality used bikes, fully serviced and ready for your next adventure. Sizes 49 to 60 usually in stock.</p>
+                <a href="selling.html" style="color: #e67e22; font-weight: bold;">Browse Inventory →</a>
+            </div>
+            <div class="card">
+                <h2>🚗 The Experience</h2>
+                <p>Skip the city traffic. We take you and a premium bike in our car to the best mountain passes and gravel paths outside Valencia.</p>
+                <a href="services.html" style="color: #e67e22; font-weight: bold;">See the Tours →</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Valencia Bike Hub. Located in the heart of Valencia, Spain.</p>
+    </footer>
+
 </body>
 </html>
