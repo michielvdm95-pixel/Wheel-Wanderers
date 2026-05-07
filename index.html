@@ -4,41 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valencia Bike Hub | Explore & Ride</title>
-    <style>
-        /* 1. THE FOUNDATION */
-        body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; padding: 0; color: #333; background-color: #f9f9f9; }
-        
-        /* 2. THE NAVIGATION */
-        nav { background: #1a252f; padding: 1rem; position: sticky; top: 0; z-index: 1000; text-align: center; }
-        nav a { color: #fff; margin: 0 15px; text-decoration: none; font-size: 0.9rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
-        nav a:hover { color: #e67e22; }
+   <style>
+    :root {
+        --accent: #d32f2f; /* That sporty red/orange color */
+        --dark: #111111;   /* Deep black for nav and text */
+        --light-bg: #fcfcfc;
+    }
 
-        /* 3. HERO SECTION */
-        .hero { 
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://picsum.photos/id/146/1200/600'); 
-            background-size: cover; 
-            background-position: center;
-            height: 60vh; 
-            display: flex; 
-            flex-direction: column; 
-            justify-content: center; 
-            align-items: center; 
-            color: white; 
-            text-align: center; 
-        }
-        .hero h1 { font-size: 3rem; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
-        .hero p { font-size: 1.2rem; max-width: 600px; margin: 20px 0; }
-        .btn-main { background: #e67e22; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+    body { font-family: 'Inter', -apple-system, sans-serif; margin: 0; background: var(--light-bg); color: #333; }
 
-        /* 4. THE SPLIT SECTION (Services) */
-        .container { max-width: 1100px; margin: 50px auto; padding: 0 20px; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px; }
-        .card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-top: 5px solid #e67e22; }
-        .card h2 { margin-top: 0; color: #1a252f; }
+    /* Navigation - Clean and Dark */
+    nav { background: var(--dark); padding: 20px; text-align: center; position: sticky; top: 0; z-index: 1000; }
+    nav a { color: white; text-decoration: none; margin: 0 20px; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; }
+    nav a:hover { color: var(--accent); }
 
-        /* 5. FOOTER */
-        footer { background: #1a252f; color: white; text-align: center; padding: 40px 0; margin-top: 50px; }
-    </style>
+    /* Hero - Huge Image with bold text */
+    .hero { 
+        height: 80vh; 
+        background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1471506480208-8a93a6863487?auto=format&fit=crop&q=80&w=2000');
+        background-size: cover; background-position: center;
+        display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center;
+    }
+    .hero h1 { font-size: 4rem; text-transform: uppercase; letter-spacing: 5px; margin: 0; }
+
+    /* The Bike Grid (Selling & Services) */
+    .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 60px 10%; }
+    
+    .bike-card { 
+        background: white; border-radius: 4px; overflow: hidden; 
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: 0.3s; 
+        border: 1px solid #eee; text-align: center; padding-bottom: 25px;
+    }
+    .bike-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+    .bike-card img { width: 100%; height: 250px; object-fit: cover; }
+    .bike-card h3 { text-transform: uppercase; letter-spacing: 1px; margin: 20px 0 10px; }
+    
+    /* Buttons */
+    .btn { 
+        background: var(--accent); color: white; padding: 12px 30px; 
+        text-decoration: none; font-weight: bold; border-radius: 2px; 
+        display: inline-block; text-transform: uppercase; font-size: 0.8rem;
+    }
+</style>
 </head>
 <body>
 
