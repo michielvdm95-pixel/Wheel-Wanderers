@@ -1,54 +1,173 @@
-<style>
-    :root {
-        --lime: #98ff00; /* Vibrant Lime Green */
-        --dark: #121212;
-        --light-bg: #f9f9f9;
-        --white: #ffffff;
-    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valencia Bike Hub | Home</title>
+    
+    <style>
+        :root {
+            --lime: #98ff00; /* Vibrant Lime Green */
+            --dark: #121212;
+            --light-bg: #f9f9f9;
+            --white: #ffffff;
+        }
 
-    body { font-family: 'Inter', sans-serif; margin: 0; background: var(--white); color: var(--dark); line-height: 1.6; }
+        body { 
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+            margin: 0; 
+            background: var(--white); 
+            color: var(--dark); 
+            line-height: 1.6; 
+        }
 
-    /* UNIFIED NAVIGATION */
-    nav { 
-        background: var(--white); 
-        padding: 20px 5%; 
-        display: flex; 
-        justify-content: space-between; 
-        align-items: center; 
-        border-bottom: 1px solid #eee; 
-        position: sticky; 
-        top: 0; 
-        z-index: 1000; 
-    }
-    .logo { font-weight: 800; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 1px; }
-    .logo span { color: var(--lime); }
-    nav a { color: var(--dark); text-decoration: none; margin-left: 20px; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; transition: 0.2s; }
-    nav a:hover { color: var(--lime); }
+        /* UNIFIED NAVIGATION */
+        nav { 
+            background: var(--white); 
+            padding: 20px 5%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-bottom: 1px solid #eee; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+        }
+        .logo { 
+            font-weight: 800; 
+            font-size: 1.4rem; 
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+            text-decoration: none;
+            color: var(--dark);
+        }
+        .logo span { color: var(--lime); background: var(--dark); padding: 2px 6px; border-radius: 4px; margin-left: 5px; }
 
-    /* SECTION HEADERS (Tomata Style) */
-    .section-header { 
-        background: var(--light-bg); 
-        padding: 50px 10%; 
-        border-left: 10px solid var(--lime); 
-        margin: 20px 0; 
-    }
-    .section-header h1, .section-header h2 { margin: 0; text-transform: uppercase; letter-spacing: 2px; }
+        .nav-links a { 
+            color: var(--dark); 
+            text-decoration: none; 
+            margin-left: 20px; 
+            font-weight: 700; 
+            font-size: 0.85rem; 
+            text-transform: uppercase; 
+            transition: 0.2s; 
+        }
+        .nav-links a:hover { color: var(--lime); }
 
-    /* THE GRID SYSTEM (For Bikes & Services) */
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 40px 10%; }
-    .card { border: 1px solid #eee; background: var(--white); transition: 0.3s; }
-    .card:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-    .card img { width: 100%; height: auto; display: block; }
-    .card-content { padding: 25px; }
-    .card-price { color: var(--lime); font-weight: bold; font-size: 1.2rem; margin-bottom: 15px; }
+        /* HERO SECTION */
+        .hero { 
+            height: 75vh; 
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://picsum.photos/id/146/1200/800'); 
+            background-size: cover; 
+            background-position: center; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            color: white; 
+            text-align: center; 
+        }
+        .hero h1 { font-size: 4rem; text-transform: uppercase; letter-spacing: 3px; margin: 0; }
+        .hero p { font-size: 1.2rem; margin: 20px 0; max-width: 600px; }
 
-    /* LIME BUTTONS */
-    .btn { 
-        display: block; width: 100%; background: var(--lime); color: var(--dark); 
-        text-align: center; padding: 15px 0; text-decoration: none; 
-        font-weight: 800; text-transform: uppercase; font-size: 0.9rem; 
-    }
-    .btn:hover { filter: brightness(1.1); }
+        /* TOMATA STYLE SECTION HEADERS */
+        .section-header { 
+            background: var(--light-bg); 
+            padding: 50px 10%; 
+            border-left: 12px solid var(--lime); 
+            margin: 40px 0; 
+        }
+        .section-header h2 { margin: 0; text-transform: uppercase; letter-spacing: 2px; font-size: 2rem; }
 
-    footer { background: var(--dark); color: white; text-align: center; padding: 40px; margin-top: 60px; }
-</style>
+        /* THE GRID SYSTEM */
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            gap: 30px; 
+            padding: 0 10% 60px 10%; 
+        }
+        .card { 
+            border: 1px solid #eee; 
+            background: var(--white); 
+            transition: 0.3s; 
+            overflow: hidden;
+        }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .card img { width: 100%; height: 250px; object-fit: cover; display: block; }
+        .card-content { padding: 30px; }
+        .card-content h3 { margin-top: 0; text-transform: uppercase; }
+
+        /* LIME BUTTONS */
+        .btn { 
+            display: block; 
+            width: fit-content; 
+            background: var(--lime); 
+            color: var(--dark); 
+            text-align: center; 
+            padding: 15px 40px; 
+            text-decoration: none; 
+            font-weight: 800; 
+            text-transform: uppercase; 
+            font-size: 0.9rem; 
+            margin-top: 20px;
+            transition: 0.2s;
+        }
+        .btn:hover { background: var(--dark); color: var(--lime); }
+
+        footer { background: var(--dark); color: white; text-align: center; padding: 60px 20px; }
+        footer p { opacity: 0.7; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">VALENCIA<span>BIKE HUB</span></a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="selling.html">Bikes for Sale</a>
+            <a href="services.html">Rentals & Tours</a>
+            <a href="explore.html">Valencia Routes</a>
+            <a href="about.html">About Me</a>
+            <a href="contact.html">Booking</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div>
+            <h1>Ride Valencia</h1>
+            <p>From city streets to mountain peaks. Premium rentals and guided car-transported experiences.</p>
+            <a href="services.html" class="btn" style="margin: 20px auto;">Our Services</a>
+        </div>
+    </header>
+
+    <div class="section-header">
+        <h2>What We Do</h2>
+    </div>
+
+    <section class="grid">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1571068316341-21c39c43c500?auto=format&fit=crop&q=80&w=800" alt="Bikes for sale">
+            <div class="card-content">
+                <h3>The Shop</h3>
+                <p>Meticulously serviced used bikes looking for a new owner. Road and MTB options in sizes 49 to 60.</p>
+                <a href="selling.html" class="btn">View Inventory</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1541625602330-2277a4c4b28d?auto=format&fit=crop&q=80&w=800" alt="Bike Rental">
+            <div class="card-content">
+                <h3>The Experience</h3>
+                <p>We pick you up, drive you to the best gravel and road routes, and provide the gear. Valencia's hidden gems await.</p>
+                <a href="services.html" class="btn">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <h3>VALENCIA BIKE HUB</h3>
+        <p>Your local cycling partner in the heart of the Valencian community.</p>
+        <p>&copy; 2026 Valencia Bike Hub. Built by hand in Spain.</p>
+    </footer>
+
+</body>
+</html>
