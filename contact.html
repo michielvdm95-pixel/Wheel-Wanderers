@@ -21,3 +21,30 @@
         </main>
 </body>
 </html>
+<section style="max-width: 500px; margin: 40px auto; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); background: white;">
+    <h2 style="color: #2c3e50; text-align: center;">Reserve Your Bike</h2>
+    
+    <form action="https://formspree.io/f/your-id-here" method="POST">
+        
+        <label style="display:block; margin-bottom: 8px;">Pick Your Size:</label>
+        <select name="bike-size" required style="width: 100%; padding: 10px; margin-bottom: 20px; border-radius: 5px; border: 1px solid #ccc;">
+            <option value="">-- Select Size --</option>
+            <option value="49">49 (Small)</option>
+            <option value="51">51 (Small/Medium)</option>
+            <option value="54">54 (Medium)</option>
+            <option value="56">56 (Large)</option>
+            <option value="58">58 (X-Large)</option>
+            <option value="60">60 (XX-Large)</option>
+        </select>
+
+        <label style="display:block; margin-bottom: 8px;">Rental Date:</label>
+        <input type="date" name="date" required style="width: 100%; padding: 10px; margin-bottom: 20px; border-radius: 5px; border: 1px solid #ccc;">
+
+        <label style="display:block; margin-bottom: 8px;">Your Email:</label>
+        <input type="email" name="email" required placeholder="name@example.com" style="width: 100%; padding: 10px; margin-bottom: 20px; border-radius: 5px; border: 1px solid #ccc;">
+
+        <button type="submit" style="width: 100%; background: #e67e22; color: white; padding: 12px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer;">
+            Request Reservation
+        </button>
+    </form>
+</section>
